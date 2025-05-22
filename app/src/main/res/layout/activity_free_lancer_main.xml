@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FreeLancerMainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/loginCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="16dp"
+                android:text="Login"
+                android:textColor="#2196F3"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="16dp"
+                android:text="Insira seu email e senha para acessar sua conta"
+                android:textColor="#4c5663"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/emailLoginInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/edittext_background"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="12dp" />
+
+            <EditText
+                android:id="@+id/senhaLoginInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/edittext_background"
+                android:hint="Senha"
+                android:inputType="textPassword"
+                android:padding="12dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#2196F3"
+                android:text="Entrar"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="16dp"
+                android:text="Não possui uma conta?"
+                android:textColor="#4c5663"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="cadastrarSeButtonOnClick"
+                android:paddingTop="10dp"
+                android:paddingBottom="16dp"
+                android:text="Cadastre-se"
+                android:textColor="#2196F3"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
