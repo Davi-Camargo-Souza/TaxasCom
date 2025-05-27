@@ -33,6 +33,13 @@ android {
 
 dependencies {
 
+    // Room components
+    implementation(libs.room.runtime)
+    annotationProcessor(libs.room.compiler)
+
+    // Optional - Test helpers
+    testImplementation(libs.room.testing)
+
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
