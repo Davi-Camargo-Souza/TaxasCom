@@ -1,13 +1,14 @@
 package com.davicamargo.taxascom.ui.activities;
 
 import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
