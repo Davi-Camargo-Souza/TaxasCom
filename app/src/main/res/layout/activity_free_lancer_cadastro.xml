@@ -23,6 +23,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:clipToPadding="false"
+            android:clipChildren="false"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="24dp">
@@ -66,6 +68,104 @@
                 android:hint="Senha"
                 android:inputType="textPassword"
                 android:padding="12dp" />
+
+            <EditText
+                android:id="@+id/confirmacaoSenhaCadastroInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/edittext_background"
+                android:hint="Confirme sua senha"
+                android:inputType="textPassword"
+                android:padding="12dp" />
+
+            <EditText
+                android:id="@+id/dtaNascimentoInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/edittext_background"
+                android:hint="Data de Nascimento"
+                android:inputType="date"
+                android:padding="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:paddingBottom="16dp"
+                android:text="Gênero"
+                android:textColor="#4c5663"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:clipToPadding="false"
+                android:layout_marginBottom="1dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:layout_marginEnd="10dp"
+                    android:text="Feminino"
+                    android:textColor="@android:color/black"
+                    android:textSize="11sp"
+                    android:backgroundTint="#FFFFFF"
+                    android:elevation="8dp"
+                    app:cornerRadius="16dp"
+                    android:translationZ="8dp"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:layout_marginEnd="10dp"
+                    android:text="Não-Binário"
+                    android:textColor="@android:color/black"
+                    android:textSize="10sp"
+                    android:backgroundTint="#FFFFFF"
+                    android:elevation="8dp"
+                    app:cornerRadius="16dp"
+                    android:translationZ="8dp"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="0dp"
+                    android:backgroundTint="#FFFFFF"
+                    android:elevation="8dp"
+                    android:singleLine="true"
+                    android:text="Masculino"
+                    android:textColor="@android:color/black"
+                    android:textSize="11sp"
+                    android:translationZ="8dp"
+                    app:cornerRadius="16dp" />
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="331dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#FFFFFF"
+                android:elevation="8dp"
+                android:singleLine="true"
+                android:text="Prefiro não informar"
+                android:textColor="@android:color/black"
+                android:textSize="11sp"
+                android:translationZ="8dp"
+                app:cornerRadius="16dp" />
+
+
 
 
         </LinearLayout>

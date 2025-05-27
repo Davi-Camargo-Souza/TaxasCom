@@ -41,7 +41,6 @@ dependencies {
     testImplementation(libs.room.testing)
 
     implementation(libs.threetenabp)
-
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
