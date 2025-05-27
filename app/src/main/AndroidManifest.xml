@@ -13,19 +13,19 @@
         android:theme="@style/Theme.TaxasCom"
         tools:targetApi="31">
         <activity
-            android:name=".EmpresaCadastroActivity"
+            android:name=".ui.activities.EmpresaCadastroActivity"
             android:exported="false" />
         <activity
-            android:name=".FreeLancerCadastroActivity"
+            android:name=".ui.activities.FreeLancerCadastroActivity"
             android:exported="false" />
         <activity
-            android:name=".EmpresaMainActivity"
+            android:name=".ui.activities.EmpresaMainActivity"
             android:exported="false" />
         <activity
-            android:name=".FreeLancerMainActivity"
+            android:name=".ui.activities.FreeLancerMainActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
