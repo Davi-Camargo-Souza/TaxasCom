@@ -1,8 +1,6 @@
-package com.davicamargo.taxascom.ui.activities;
+package com.davicamargo.taxascom.ui;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,13 +24,5 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void souFreeLancerButtonOnClick(View view){
-        var freeLancerIntent = new Intent(this, FreeLancerMainActivity.class);
-        startActivity(freeLancerIntent);
-    }
 
-    public void souEmpresaButtonOnClick(View view){
-        var empresaIntent = new Intent(this, EmpresaMainActivity.class);
-        startActivity(empresaIntent);
-    }
 }

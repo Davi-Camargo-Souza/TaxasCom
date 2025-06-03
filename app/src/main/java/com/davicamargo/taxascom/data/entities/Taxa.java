@@ -32,7 +32,8 @@ import java.util.UUID;
     indices = {
             @Index("cod_funcao"),
             @Index("cod_empresa"),
-            @Index("cod_freelancer")
+            @Index("cod_freelancer"),
+            @Index(value = {"cod"}, unique = true)
     })
 public class Taxa extends BaseEntity {
     public String descricao;

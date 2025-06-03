@@ -3,13 +3,19 @@ package com.davicamargo.taxascom.data.entities;
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.Index;
+
 import com.davicamargo.taxascom.data.entities.common.BaseEntity;
 import com.davicamargo.taxascom.data.enums.ETipoGenero;
 import com.davicamargo.taxascom.data.enums.ETipoPronome;
 import java.util.List;
 import org.threeten.bp.LocalDate;
 
-@Entity(tableName = "freelancers")
+@Entity(tableName = "freelancers",
+    indices = {
+        @Index(value = {"cod"}, unique = true),
+        @Index(value = {"email"}, unique = true)})
 public class Freelancer extends BaseEntity {
     public Freelancer(@NonNull String nome,
                       List<ETipoPronome> tiposPronomes,
@@ -25,6 +31,18 @@ public class Freelancer extends BaseEntity {
         this.dataNascimento = dataNascimento;
         this.senha = senha;
         this.celular = celular;
+        this.email = email;
+    }
+
+    @Ignore
+    public Freelancer(@NonNull String nome,
+                      @NonNull LocalDate dataNascimento,
+                      @NonNull String senha,
+                      @NonNull String email) {
+        this.nome = nome;
+        Ativo = true;
+        this.dataNascimento = dataNascimento;
+        this.senha = senha;
         this.email = email;
     }
     @NonNull

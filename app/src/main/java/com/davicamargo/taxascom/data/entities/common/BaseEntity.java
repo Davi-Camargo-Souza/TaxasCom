@@ -2,6 +2,7 @@ package com.davicamargo.taxascom.data.entities.common;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
+import androidx.room.Index;
 import androidx.room.PrimaryKey;
 import org.threeten.bp.LocalDateTime;
 import java.util.UUID;

@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activities.FreeLancerCadastroActivity">
+    tools:context=".ui.freelancer.FreeLancerCadastroActivity">
 
 
     <androidx.cardview.widget.CardView
@@ -50,6 +50,16 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/nomeCadastroInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/edittext_background"
+                android:hint="Nome"
+                android:inputType="textPersonName"
+                android:padding="12dp" />
+
+            <EditText
                 android:id="@+id/emailCadastroInput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -80,7 +90,7 @@
                 android:padding="12dp" />
 
             <EditText
-                android:id="@+id/dtaNascimentoInput"
+                android:id="@+id/dtaNascimentoCadastroInput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
@@ -90,84 +100,24 @@
                 android:padding="12dp" />
 
             <TextView
+                android:id="@+id/mensagemErroCadastro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="start"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"
                 android:paddingBottom="16dp"
-                android:text="Gênero"
-                android:textColor="#4c5663"
-                android:textSize="15sp"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="13sp"
                 android:textStyle="bold" />
 
-            <LinearLayout
+            <Button
+                android:id="@+id/enviarCadastroFreelancerButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:clipToPadding="false"
-                android:layout_marginBottom="1dp">
-
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:singleLine="true"
-                    android:layout_marginEnd="10dp"
-                    android:text="Feminino"
-                    android:textColor="@android:color/black"
-                    android:textSize="11sp"
-                    android:backgroundTint="#FFFFFF"
-                    android:elevation="8dp"
-                    app:cornerRadius="16dp"
-                    android:translationZ="8dp"
-                    />
-
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:singleLine="true"
-                    android:layout_marginEnd="10dp"
-                    android:text="Não-Binário"
-                    android:textColor="@android:color/black"
-                    android:textSize="10sp"
-                    android:backgroundTint="#FFFFFF"
-                    android:elevation="8dp"
-                    app:cornerRadius="16dp"
-                    android:translationZ="8dp"
-                    />
-
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="0dp"
-                    android:backgroundTint="#FFFFFF"
-                    android:elevation="8dp"
-                    android:singleLine="true"
-                    android:text="Masculino"
-                    android:textColor="@android:color/black"
-                    android:textSize="11sp"
-                    android:translationZ="8dp"
-                    app:cornerRadius="16dp" />
-
-            </LinearLayout>
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="331dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:backgroundTint="#FFFFFF"
-                android:elevation="8dp"
-                android:singleLine="true"
-                android:text="Prefiro não informar"
-                android:textColor="@android:color/black"
-                android:textSize="11sp"
-                android:translationZ="8dp"
-                app:cornerRadius="16dp" />
-
-
-
-
+                android:backgroundTint="#2196F3"
+                android:onClick="enviarCadastroFreelancerButtonOnClick"
+                android:text="Enviar"
+                android:textColor="@android:color/white" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
