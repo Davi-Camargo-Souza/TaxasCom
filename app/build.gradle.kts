@@ -39,11 +39,14 @@ dependencies {
 
     // Optional - Test helpers
     testImplementation(libs.room.testing)
+    implementation(libs.glide)
+    annotationProcessor(libs.compiler)
 
     implementation(libs.threetenabp)
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
+    implementation(libs.lifecycle.viewmodel)
     implementation(libs.constraintlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

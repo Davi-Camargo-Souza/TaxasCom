@@ -2,9 +2,12 @@ package com.davicamargo.taxascom.data.entities;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
+import androidx.room.Index;
+
 import com.davicamargo.taxascom.data.entities.common.BaseEntity;
 
-@Entity(tableName = "enderecos")
+@Entity(tableName = "enderecos",
+        indices = {@Index(value = {"cod"}, unique = true)})
 public class Endereco extends BaseEntity {
     public Endereco(@NonNull String rua,
                     @NonNull String pais,

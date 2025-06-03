@@ -14,19 +14,22 @@
         android:theme="@style/Theme.TaxasCom"
         tools:targetApi="31">
         <activity
-            android:name=".ui.activities.EmpresaCadastroActivity"
+            android:name=".ui.MainLoginActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activities.FreeLancerCadastroActivity"
+            android:name=".ui.empresa.EmpresaCadastroActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activities.EmpresaMainActivity"
+            android:name=".ui.freelancer.FreeLancerCadastroActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activities.FreeLancerMainActivity"
+            android:name=".ui.empresa.EmpresaLoginActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activities.MainActivity"
+            android:name=".ui.freelancer.FreeLancerLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,12 +1,10 @@
-package com.davicamargo.taxascom.ui.activities;
+package com.davicamargo.taxascom.ui.freelancer;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.graphics.Typeface;
-import android.os.Bundle;
 import android.text.InputType;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import androidx.activity.EdgeToEdge;
@@ -17,13 +15,13 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.davicamargo.taxascom.R;
 
-public class FreeLancerMainActivity extends AppCompatActivity {
+public class FreeLancerLoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_free_lancer_main);
+        setContentView(R.layout.activity_login_free_lancer_main);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

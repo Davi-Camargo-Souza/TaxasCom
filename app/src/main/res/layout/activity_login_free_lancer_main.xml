@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activities.EmpresaMainActivity">
+    tools:context=".ui.freelancer.FreeLancerLoginActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/loginCard"
@@ -32,7 +32,7 @@
                 android:layout_gravity="center_horizontal"
                 android:paddingBottom="16dp"
                 android:text="Login"
-                android:textColor="#4CAF50"
+                android:textColor="#2196F3"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -41,35 +41,56 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:paddingBottom="16dp"
-                android:text="Insira seu CNPJ e senha para acessar sua conta"
+                android:text="Insira seu email e senha para acessar sua conta"
                 android:textColor="#4c5663"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/cnpjInput"
+                android:id="@+id/emailLoginInput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
                 android:background="@drawable/edittext_background"
-                android:hint="CNPJ"
-                android:inputType="text"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
                 android:padding="12dp" />
 
-            <EditText
-                android:id="@+id/senhaInput"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/edittext_background"
-                android:hint="Senha"
-                android:inputType="textPassword"
-                android:padding="12dp" />
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <EditText
+                    android:id="@+id/senhaLoginInput"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_background"
+                    android:hint="Senha"
+                    android:inputType="textPassword"
+                    android:padding="12dp" />
+
+                <ImageButton
+                    android:id="@+id/verSenhaButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Ver senha"
+                    android:onClick="verSenhaButtonOnClick"
+                    android:src="@drawable/ic_eye"
+                    android:tag="false"
+                    app:tint="#4c5663" />
+
+            </LinearLayout>
+
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#4CAF50"
+                android:backgroundTint="#2196F3"
                 android:text="Entrar"
                 android:textColor="@android:color/white" />
 
@@ -93,9 +114,11 @@
                 android:paddingTop="10dp"
                 android:paddingBottom="16dp"
                 android:text="Cadastre-se"
-                android:textColor="#4CAF50"
+                android:textColor="#2196F3"
                 android:textSize="15sp"
                 android:textStyle="bold" />
+
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

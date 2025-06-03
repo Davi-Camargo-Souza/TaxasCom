@@ -12,7 +12,7 @@ import java.util.UUID;
     tableName = "empresas",
     foreignKeys = {
         @ForeignKey(
-                entity = RamoEmpresa.class,
+                entity = RamoAtuacao.class,
                 parentColumns = "cod",
                 childColumns = "cod_ramo"
         ),
@@ -24,7 +24,9 @@ import java.util.UUID;
     },
     indices = {
         @Index("cod_ramo"),
-        @Index("cod_endereco")
+        @Index(value = "cod_endereco"),
+        @Index(value = {"cod"}, unique = true),
+        @Index(value = "contato_email", unique = true)
     })
 public class Empresa extends BaseEntity {
     public Empresa(@NonNull String nome,
